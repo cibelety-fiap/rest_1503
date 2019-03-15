@@ -23,6 +23,13 @@ public class ProdutoBO {
 			return new ProdutoTO(-1,0,0, "Produto não encontrado");
 		}
 	}
+	
+	public void cadastrar(ProdutoTO produto) {
+		
+		
+		
+		
+	}
 
 	public List<ProdutoTO> listar() {
 		ArrayList<ProdutoTO> lista = new ArrayList<ProdutoTO>();
@@ -32,5 +39,6 @@ public class ProdutoBO {
 		lista.add(ProdutoBO.buscar(404));
 		return lista;
 	}
+	
 
 }
