@@ -9,8 +9,7 @@ import br.com.fiap.to.ProdutoTO;
 
 public class ProdutoBO {
 	
-	public static ProdutoTO consultaBO(int codProd) {
-		
+	public static ProdutoTO buscar(int codProd) {
 		
 		if (codProd == 401) {
 			return new ProdutoTO(codProd,2.99,4, "Camisa Branca");
@@ -27,10 +26,10 @@ public class ProdutoBO {
 
 	public List<ProdutoTO> listar() {
 		ArrayList<ProdutoTO> lista = new ArrayList<ProdutoTO>();
-		lista.add(ProdutoBO.consultaBO(401));
-		lista.add(ProdutoBO.consultaBO(402));
-		lista.add(ProdutoBO.consultaBO(403));
-		lista.add(ProdutoBO.consultaBO(404));
+		lista.add(ProdutoBO.buscar(401));
+		lista.add(ProdutoBO.buscar(402));
+		lista.add(ProdutoBO.buscar(403));
+		lista.add(ProdutoBO.buscar(404));
 		return lista;
 	}
 
