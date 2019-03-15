@@ -9,6 +9,25 @@ import br.com.fiap.to.ProdutoTO;
 
 public class ProdutoBO {
 	
+	private static ProdutoBO estoqueBo;
+	private ArrayList<ProdutoTO> lista = null;
+	
+	public static ProdutoBO getInstance() {
+		if(estoqueBo == null) {
+			estoqueBo = new ProdutoBO()
+		}
+		return produtoBO;
+	}
+	
+	public ProdutoBO() {
+		lista = new ArrayList();
+
+		lista.add(ProdutoBO.buscar(401));
+		lista.add(ProdutoBO.buscar(402));
+		lista.add(ProdutoBO.buscar(403));
+		lista.add(ProdutoBO.buscar(404));
+	}
+	
 	public static ProdutoTO buscar(int codProd) {
 		
 		if (codProd == 401) {
@@ -32,11 +51,7 @@ public class ProdutoBO {
 	}
 
 	public List<ProdutoTO> listar() {
-		ArrayList<ProdutoTO> lista = new ArrayList<ProdutoTO>();
-		lista.add(ProdutoBO.buscar(401));
-		lista.add(ProdutoBO.buscar(402));
-		lista.add(ProdutoBO.buscar(403));
-		lista.add(ProdutoBO.buscar(404));
+
 		return lista;
 	}
 	

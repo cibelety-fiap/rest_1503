@@ -26,8 +26,7 @@ public class ProdutoResource {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<ProdutoTO> buscar(){
-	
+	public List<ProdutoTO> buscar(){	
 		return produtoBo.listar();
 	}
 	
@@ -41,7 +40,7 @@ public class ProdutoResource {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response cadastrar(ProdutoTO produto, @Context UriInfo uriInfo){
-//		produtoBo.cadastrar(produto);
+		produtoBo.cadastrar(produto);
 		System.out.println(produto.getCodigo());
 		System.out.println(produto.getDescricao());
 		System.out.println(produto.getPreco());
